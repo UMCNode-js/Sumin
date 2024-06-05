@@ -7,4 +7,5 @@ export const response = ({isSuccess, code, message}, result) => {
         message: message,
         result: result
     }
+    //test
 };
