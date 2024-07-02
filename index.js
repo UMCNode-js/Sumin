@@ -1,5 +1,5 @@
 import express from 'express';
-import { tempRouter } from './src/routes/temp.route.js';
+import { tempRouter } from './src/routes/user.route.js';
 import { specs } from './config/swagger.config.js';
 import SwaggerUi from 'swagger-ui-express';
 dotenv.config();    // .env 파일 사용 (환경 변수 관리)
@@ -13,11 +13,10 @@ const port = 3000;
 //     console.log(`Example app listening on port ${port}`)
 // });
 
-app.use('/temp', tempRouter);
 
 app.use(express.urlencoded({extended: false})); // 단순 객체 문자열 형태로 본문 데이터 해석
 // router setting
-app.use('/temp', tempRouter);
+//app.use('/temp', tempRouter);
 app.use('/user', userRouter);
 
 
